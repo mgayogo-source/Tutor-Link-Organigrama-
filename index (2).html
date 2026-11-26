@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organigrama TutorLink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Work+Sans:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1>Organigrama RRHH</h1>
+    <div class="brand" aria-label="TutorLink">TutorLink<span class="star" aria-hidden="true">✱</span></div>
+  </header>
+
+  <ul class="legend" aria-label="Niveles jerárquicos">
+    <li><span class="sw lv1"></span>Nivel directivo (1)</li>
+    <li><span class="sw lv2"></span>Responsables de departamento (4)</li>
+    <li><span class="sw lv3"></span>Nivel operativo (3)</li>
+  </ul>
+  <p class="hint">Pulsa sobre una persona para ver su ficha de puesto.</p>
+
+  <div class="tree-scroll"><div class="tree" id="tree"></div></div>
+  <p class="support">Asesoría jurídica y fiscal y auditoría técnica: apoyo externo contratado según necesidad.</p>
+
+  <section class="summary" aria-labelledby="resumen-h">
+    <h2 id="resumen-h">Resumen de funciones por puesto</h2>
+    <p>Fase piloto: los ocho socios promotores cubren todos los puestos a tiempo parcial, sin contratar personal externo.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Persona y puesto</th><th>Departamento</th><th>Funciones principales</th><th>Depende de</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" tabindex="-1" hidden>
+  <button type="button" class="close" id="close" aria-label="Cerrar ficha">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M3 3l12 12M15 3L3 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+  </button>
+  <div id="sheet-body"></div>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
